@@ -143,7 +143,7 @@ define([
 			];
 		}
 		return loaderTest(
-			require.toUrl('./index.html'),
+			require.toUrl('./ibm_index.html'),
 			{
 				async: async || 0,
 				packages: [

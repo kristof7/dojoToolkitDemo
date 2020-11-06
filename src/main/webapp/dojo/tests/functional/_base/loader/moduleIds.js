@@ -18,7 +18,7 @@ define([
 		name: 'dojo/_base/loader/moduleIds',
 
 		testModuleIds: loaderTest(
-			require.toUrl('./index.html'),
+			require.toUrl('./ibm_index.html'),
 			{
 				async: 1,
 				packages: [
@@ -88,7 +88,7 @@ define([
 		),
 
 		baseUrl: loaderTest(
-			require.toUrl('./index.html'),
+			require.toUrl('./ibm_index.html'),
 			{
 				async: 1,
 				packages: [
@@ -109,7 +109,7 @@ define([
 		),
 
 		moduleUrl: loaderTest(
-			require.toUrl('./index.html'),
+			require.toUrl('./ibm_index.html'),
 			{
 				async: 1,
 				packages: [
@@ -141,7 +141,7 @@ define([
 		),
 
 		modulePaths: loaderTest(
-			require.toUrl('./index.html'),
+			require.toUrl('./ibm_index.html'),
 			{
 				async: 1,
 				packages: [
@@ -171,7 +171,7 @@ define([
 		),
 
 		moduleUrls: loaderTest(
-			require.toUrl('./index.html'),
+			require.toUrl('./ibm_index.html'),
 			{
 				async: 1,
 				packages: [

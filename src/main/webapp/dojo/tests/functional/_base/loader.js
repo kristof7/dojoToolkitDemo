@@ -13,7 +13,7 @@ define([
 		name: 'dojo/_base/loader',
 
 		'async with dojo require': loaderTest(
-			require.toUrl('./loader/index.html'),
+			require.toUrl('./loader/ibm_index.html'),
 			{
 				async: true,
 				baseUrl: '.',
@@ -117,7 +117,7 @@ define([
 		})(),
 
 		'config api': loaderTest(
-			require.toUrl('./loader/index.html'),
+			require.toUrl('./loader/ibm_index.html'),
 			{
 				async: true,
 				isDebug: true,
@@ -368,7 +368,7 @@ define([
 		),
 
 		'declare steps on provide': loaderTest(
-			require.toUrl('./loader/index.html'),
+			require.toUrl('./loader/ibm_index.html'),
 			{
 				packages: [
 					{ name: 'dojo', location: 'node_modules/dojo' },
@@ -406,7 +406,7 @@ define([
 		'publish require result': (function () {
 			function createPublishTest(publish) {
 				return loaderTest(
-					require.toUrl('./loader/index.html'),
+					require.toUrl('./loader/ibm_index.html'),
 					{
 						publishRequireResult: Boolean(publish),
 						packages: [
@@ -459,7 +459,7 @@ define([
 		})(),
 
 		'top level module by paths': loaderTest(
-			require.toUrl('./loader/index.html'),
+			require.toUrl('./loader/ibm_index.html'),
 			{
 				packages: [
 					{ name: 'dojo', location: 'node_modules/dojo' }
@@ -519,7 +519,7 @@ define([
 		),
 
 		'config/test': loaderTest(
-			require.toUrl('./loader/index.html'),
+			require.toUrl('./loader/ibm_index.html'),
 			{
 				async: true,
 				baseUrl: '../../../..',
@@ -649,7 +649,7 @@ define([
 			}
 		),
 		mappingMultiLayer: loaderTest(
-			require.toUrl('./loader/index.html'),
+			require.toUrl('./loader/ibm_index.html'),
 			{
 				async: true,
 				baseUrl: '.',
@@ -732,7 +732,7 @@ define([
 		),
 
 		mapping: loaderTest(
-			require.toUrl('./loader/index.html'),
+			require.toUrl('./loader/ibm_index.html'),
 			{
 				async: true,
 				packages: [
@@ -798,7 +798,7 @@ define([
 		),
 
 		compactPath: loaderTest(
-			require.toUrl('./loader/index.html'),
+			require.toUrl('./loader/ibm_index.html'),
 			{ isDebug: 1, async: 1 },
 			function (callback) {
 				var compactPath = require.compactPath;
@@ -832,7 +832,7 @@ define([
 		),
 
 		modules: loaderTest(
-			require.toUrl('./loader/index.html'),
+			require.toUrl('./loader/ibm_index.html'),
 			{
 				async: 1,
 				baseUrl: './foo',

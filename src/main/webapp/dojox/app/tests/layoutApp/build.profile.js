@@ -23,7 +23,7 @@ var profile = {
 	}],
 	layers: {
 		"layoutApp/layoutApp": {
-			include: [ "layoutApp/index.html" ]
+			include: [ "layoutApp/ibm_index.html" ]
 		}
 	}
 };

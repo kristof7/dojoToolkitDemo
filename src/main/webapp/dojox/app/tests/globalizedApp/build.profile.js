@@ -22,7 +22,7 @@ var profile = {
 	}],
 	layers: {
 		"globalizedApp/globalizedApp": {
-			include: [ "globalizedApp/index.html" ]
+			include: [ "globalizedApp/ibm_index.html" ]
 		}
 	}
 };
