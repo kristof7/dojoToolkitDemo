@@ -12,6 +12,7 @@
     <li class="highlight">This is the second item in a list</li>
     <li>This is the third item in a list</li>
 </ul>
+<div dojoType="dijit._Calendar"></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/dojo/1.5/dojo/dojo.xd.js">
 </script>
@@ -30,6 +31,11 @@
             table += "</table>";
             dojo.place(table, dojo.body());
         }
+    });
+    require([
+        'dijit/dijit'
+    ], function() {
+        dojo.require("dijit._Calendar");
     });
 </script>
 </body>
