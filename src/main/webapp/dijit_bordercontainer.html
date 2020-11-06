@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    <title>Dijit Template</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs
+/dojo/1.5/dijit/themes/claro/claro.css"/>
+    <style type="text/css">
+        body, html {
+            font-family: helvetica, arial, sans-serif;
+            font-size: 90%;
+        }
+    </style>
+</head>
+<body class="claro">
+
+<div style="width: 535px; height: 290px">
+    <div dojoType="dijit.layout.BorderContainer" style="width: 100%;
+height: 100%;">
+        <div dojoType="dijit.layout.ContentPane" region="top" splitter="true">
+            This is the content in the top section.
+        </div>
+        <div dojoType="dijit.layout.ContentPane" region="left" style="width: 100px;"
+             splitter="true">
+            This is the content in the left section.
+        </div>
+        <div dojoType="dijit.layout.ContentPane" region="center" splitter="true">
+            This is the content in the center section.
+        </div>
+        <div dojoType="dijit.layout.ContentPane" region="right" style="width: 100px;"
+             splitter="true">
+            This is the content in the right section.
+        </div>
+        <div dojoType="dijit.layout.ContentPane" region="bottom" splitter="true">
+            This is the content in the bottom section.
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/dojo/1.5/dojo/dojo.xd.js"
+        djConfig="parseOnLoad: true"></script>
+
+<script>
+    dojo.require("dijit.layout.BorderContainer");
+    dojo.require("dijit.layout.ContentPane");
+</script>
+</body>
+</html>
