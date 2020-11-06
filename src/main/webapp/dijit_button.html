@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    <title>Dijit Template</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs
+/dojo/1.5/dijit/themes/claro/claro.css"/>
+    <style type="text/css">
+        body, html {
+            font-family: helvetica, arial, sans-serif;
+            font-size: 90%;
+        }
+    </style>
+</head>
+<body class="claro">
+<!--dijit button-->
+<button id="myButton" dojoType="dijit.form.Button">Push Me</button>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/dojo/1.5/dojo/dojo.xd.js"
+        djConfig="parseOnLoad: true"></script>
+
+<script>
+    dojo.require("dijit.form.Button");
+    dojo.require("dijit.Dialog");
+
+    dojo.addOnLoad(function () {
+        var button = dijit.byId("myButton");
+        dojo.connect(button, "onClick", null, function (evt) {
+            var dialog = new dijit.Dialog({
+                content: "You clicked the button!",
+                title: "Message"
+            }).show();
+        })
+    });
+</script>
+</body>
+</html>

@@ -12,35 +12,14 @@
     </style>
 </head>
 <body class="claro">
-
 <!--callendar -->
 <div dojoType="dijit._Calendar"></div>
-
-<!--color-picker ver 1 -->
-<div dojoType="dijit.TitlePane" title="Color Picker">
-    <div dojoType="dijit.ColorPalette"></div>
-</div>
-
-<!--color-picker ver 2-->
-<div dojoType="dijit.ColorPalette">
-    <script type="dojo/method" event="onChange" args="evt">
-         alert(this.value);
-
-    </script>
-
-</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/dojo/1.5/dojo/dojo.xd.js"
         djConfig="parseOnLoad: true"></script>
 <script>
     dojo.require("dijit.dijit");
     dojo.require("dijit._Calendar");
-    dojo.require("dijit.TitlePane");
-    dojo.require("dijit.ColorPalette");
-
-    dojo.addOnLoad(function () {
-
-    });
 </script>
 </body>
 </html>
