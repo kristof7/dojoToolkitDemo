@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exploring Dojo</title>
+</head>
+<body>
+<h1>Exploring Dojo</h1>
+<div id="message">This is a DIV element with id attribute message.</div>
+<ul id="list">
+    <li>This is the first item in a list</li>
+    <li class="highlight">This is the second item in a list</li>
+    <li>This is the third item in a list</li>
+</ul>
+
+<script src="https://ajax.googleapis.com/ajax/libs/dojo/1.5/dojo/dojo.xd.js">
+</script>
+<script>
+    dojo.xhrGet({
+        url: "data.json", handleAs: "json", load: function (data) {
+            var table = "<table border=\"1\">";
+            table += "<tr><th>Name</th><th>Age</th></tr>";
+            dojo.forEach(data.people, function (person) {
+                table += "<tr><td>";
+                table += person.first_name + " " + person.last_name;
+                table += "</td><td>";
+                table += person.age;
+                table += "</td></tr>";
+            });
+            table += "</table>";
+            dojo.place(table, dojo.body());
+        }
+    });
+</script>
+</body>
+</html>

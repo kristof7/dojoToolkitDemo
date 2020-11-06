@@ -27,6 +27,75 @@
             dojo.body()
         );
     });
+    //---- first example (console log) ----
+
+    // var list = ['My', 'name', 'is', 'Joe'];
+    // var printArray = function (item, i) {
+    //     console.log((i + 1) + '. ' + item);
+    // }
+    // dojo.forEach(list, printArray);
+
+    //---- second example (console log) ----
+
+    var filteredList = dojo.filter(list, function (item) {
+        return item != "is";
+    });
+    dojo.forEach(filteredList, "console.log(item)");
+
+    //---- event handling (message on click) ----
+
+    var message = dojo.byId("message");
+    dojo.connect(message, "onclick", function () {
+        alert(message.innerHTML);
+    });
+
+    //---- event handling (bold on click) first Example ----
+
+    // dojo.query("#list li").forEach(function (item) {
+    //     dojo.connect(item, "onclick", function () {
+    //         dojo.style(item, {fontWeight: "bold"});
+    //     });
+    // });
+
+    //---- event handling (bold on click) second example ----
+
+    dojo.query("#list li").onclick(function (e) {
+        dojo.style(e.target, {fontWeight: "bold"});
+    });
+
+    //---- ajax toggle ----
+
+    function toggleImage() {
+        //Code to show/hide loading image goes here
+    }
+
+    function callAjax() {
+        toggleImage();
+        //Code to call Ajax function goes here
+    }
+
+    function handleResponse() {
+        //Code to handle Ajax response goes here
+        toggleImage();
+    }
+
+    //---- print name ----
+    dojo.subscribe("printName", function (msg) {
+        console.log("The person's name is: " + msg.first_name + " " + msg.last_name);
+    });
+
+    dojo.publish("printName", [{first_name: "Joe", last_name: "Lennon"}]);
+
+    //---- xhr function call ----
+    dojo.xhrGet({
+        url: "save_data.php",
+        content: {
+            id: "100",
+            first_name: "Joe",
+            last_name: "Lennon"
+        }
+    });
+
 </script>
 </body>
 </html>
